@@ -1,0 +1,17 @@
+#!/usr/bin/env php
+<?php
+
+require getenv('HOME') . '/.composer/vendor/autoload.php';
+
+use Genzouw\Wpapi\Wp;
+
+$wp = new Wp(getenv('WP_URL'), getenv('WP_USER'), getenv('WP_PASSWORD'));
+
+$lines = explode("\n", file_get_contents('php://stdin'));
+
+$wp->newPost(array(
+    'post_type' => 'post',
+    'post_content' => implode(PHP_EOL, array_slice($lines, 2)),
+    'post_title' => preg_replace('/^# +/su', '', $lines[0]),
+    'post_status' => 'draft',
+));

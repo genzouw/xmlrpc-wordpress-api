@@ -1,0 +1,59 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "a82059c650f0c82a6e4f85dfbe68840b",
+    "packages": [
+        {
+            "name": "rolenweb/xml-rpc-wordpress-api",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rolenweb/xmlrpc-wordpress-api.git",
+                "reference": "4177850faf9b34b97ffafebc06f168660128ba0b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rolenweb/xmlrpc-wordpress-api/zipball/4177850faf9b34b97ffafebc06f168660128ba0b",
+                "reference": "4177850faf9b34b97ffafebc06f168660128ba0b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Rolenweb\\Wpapi\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT License"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Khrustalev",
+                    "email": "rolenweb@yandex.ru"
+                }
+            ],
+            "description": "XML-RPC-WordPress-API",
+            "time": "2017-02-17T16:31:46+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "rolenweb/xml-rpc-wordpress-api": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.4.0"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
+}
