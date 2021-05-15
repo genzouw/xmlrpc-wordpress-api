@@ -1,23 +1,21 @@
 {
-    "name": "genzouw/xmlrpc-wordpress-api",
-    "description": "wordpress post from commad-line.",
-    "type": "library",
-    "authors": [
-        {
-            "name": "genzouw",
-            "email": "genzouw@gmail.com"
-        }
-    ],
-    "require": {
-    	"php": ">=5.4.0",
-      "rolenweb/xml-rpc-wordpress-api": "dev-master"
-    },
-    "autoload": {
-        "psr-4": {
-            "Genzouw\\Wpapi\\": "src/"
-        }
-    },
-    "bin": [
-        "bin/wp-post"
-    ]
+  "name": "genzouw/xmlrpc-wordpress-api",
+  "description": "wordpress post from commad-line.",
+  "type": "library",
+  "authors": [{
+    "name": "genzouw",
+    "email": "genzouw@gmail.com"
+  }],
+  "require": {
+    "php": ">=7.2.0",
+    "rolenweb/xml-rpc-wordpress-api": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Genzouw\\Wpapi\\": "src/"
+    }
+  },
+  "bin": [
+    "bin/wp-post"
+  ]
 }

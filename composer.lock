@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a82059c650f0c82a6e4f85dfbe68840b",
+    "content-hash": "5a905d2e1b10bceae2d7f1a0e7665ac6",
     "packages": [
         {
             "name": "rolenweb/xml-rpc-wordpress-api",
@@ -23,6 +23,7 @@
             "require": {
                 "php": ">=5.4.0"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -40,6 +41,10 @@
                 }
             ],
             "description": "XML-RPC-WordPress-API",
+            "support": {
+                "issues": "https://github.com/rolenweb/xmlrpc-wordpress-api/issues",
+                "source": "https://github.com/rolenweb/xmlrpc-wordpress-api/tree/master"
+            },
             "time": "2017-02-17T16:31:46+00:00"
         }
     ],
@@ -52,8 +57,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.4.0"
+        "php": ">=7.2.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }
