@@ -15,3 +15,10 @@ $wp->newPost(array(
     'post_title' => preg_replace('/^# +/su', '', $lines[0]),
     'post_status' => 'draft',
 ));
+
+if (isset($response['error'])) {
+  fputs(STDERR,json_encode($response));
+  exit(100);
+} else {
+  fputs(STDOUT,json_encode($response));
+}
