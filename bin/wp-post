@@ -5,14 +5,15 @@ require getenv('HOME') . '/.composer/vendor/autoload.php';
 
 use Genzouw\Wpapi\Wp;
 
-$wp = new Wp(getenv('WP_URL'), getenv('WP_USER'), getenv('WP_PASSWORD'));
-
 $lines = explode("\n", file_get_contents('php://stdin'));
+$title = preg_replace('/^# +/su', '', $lines[0]);
+$content = implode(PHP_EOL, array_slice($lines, 2));
 
-$wp->newPost(array(
+$wp = new Wp(getenv('WP_URL'), getenv('WP_USER'), getenv('WP_PASSWORD'));
+$response = $wp->newPost(array(
     'post_type' => 'post',
-    'post_content' => implode(PHP_EOL, array_slice($lines, 2)),
-    'post_title' => preg_replace('/^# +/su', '', $lines[0]),
+    'post_title' => $title,
+    'post_content' => $content,
     'post_status' => 'draft',
 ));
 
