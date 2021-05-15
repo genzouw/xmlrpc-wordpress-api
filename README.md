@@ -1,6 +1,6 @@
 # xmlrpc-wordpress-api
 
-`rolenweb/xml-rpc-wordpress-api` liberay wapper for Wide Char (ex: Japanese)
+`rolenweb/xml-rpc-wordpress-api` liberay wrapper for Wide Char (ex: Japanese)
 
 ## Description
 
