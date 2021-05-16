@@ -9,9 +9,9 @@ $wp = new Wp(getenv('WP_URL'), getenv('WP_USER'), getenv('WP_PASSWORD'));
 $response = $wp->getPosts(array());
 
 if (isset($response['error'])) {
-    fputs(STDERR, json_encode($response));
+    echo json_encode($response), PHP_EOL;
     exit(100);
 } else {
     // Parse Example:  wp-getposts | jq -rc '.data[].item | .[0].post_id+"\t"+.[1].post_title'
-    fputs(STDOUT, json_encode($response));
+    echo json_encode($response), PHP_EOL;
 }

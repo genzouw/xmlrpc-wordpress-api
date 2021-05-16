@@ -18,8 +18,8 @@ $response = $wp->newPost(array(
 ));
 
 if (isset($response['error'])) {
-    fputs(STDERR, json_encode($response));
+    echo json_encode($response), PHP_EOL;
     exit(100);
 } else {
-    fputs(STDOUT, json_encode($response));
+    echo json_encode($response), PHP_EOL;
 }
