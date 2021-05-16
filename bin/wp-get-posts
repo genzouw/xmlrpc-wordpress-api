@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+
+# require getenv('HOME') . '/.composer/vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use Genzouw\Wpapi\Wp;
+
+$wp = new Wp(getenv('WP_URL'), getenv('WP_USER'), getenv('WP_PASSWORD'));
+$response = $wp->getPosts(array());
+
+if (isset($response['error'])) {
+    fputs(STDERR, json_encode($response));
+    exit(100);
+} else {
+    // Parse Example:  wp-getposts | jq -rc '.data[].item | .[0].post_id+"\t"+.[1].post_title'
+    fputs(STDOUT, json_encode($response));
+}
